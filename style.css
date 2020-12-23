@@ -1,11 +1,72 @@
-* {
+/*
+====================
+Variables
+====================
+*/
+
+:root {
+    /* dark shades of primary colour */
+    --clr-primary-1: hsl(205, 86%, 17%);
+    --clr-primary-2: hsl(205, 77%, 27%);
+    --clr-primary-3: hsl(205, 72%, 37%);
+    --clr-primary-4: hsl(205, 63%, 48%);
+    /* primary-main colour */
+    --clr-primary-5: hsl(205, 78%, 60%);
+    /* lighter shades of primary colour */
+    --clr-primary-6: hsl(205, 89%, 70%);
+    --clr-primary-7: hsl(205, 90%, 76%);
+    --clr-primary-8: hsl(205, 86%, 81%);
+    --clr-primary-9: hsl(205, 90%, 88%);
+    --clr-primary-10: hsl(205, 100%, 96%);
+    /* darkest grey - use in headings */
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    /* light grey - use for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    /* Other */
+    --clr-white: #fff;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: rgb(0, 0, 0);
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*
+========================
+Global Styles
+========================
+*/
+
+*,
+::after,
+::before {
     padding:0;
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: var(--ff-secondary);
+    background-color: var(--clr-black);
+    color: var(--clr-grey-6);
+}
+
 .navbar {
-    background-color: black;
-    color: #d8d8d8;
     border-bottom: 0.5px solid gray;
     width:100%;
     line-height: 80px;
@@ -15,12 +76,13 @@
     position: absolute;
     top:0;
     left: 0;
-    font-family: 'Karla';
 }
+
 .navbar a {
     text-decoration: none;
-    color: #d8d8d8;
+    color: var(--clr-grey-9);
 }
+
 .navbar a.nav-logo {
     float: left;
     height: inherit;
@@ -33,66 +95,72 @@
     color: #d8d8d8;
     font-weight: bold;
 }
-.navbar ul{
+
+.navbar ul {
     float: right;
     list-style: none;
     height: inherit;
     line-height: inherit;
     padding: 0 50px;
 }
-.navbar ul li{
+
+.navbar ul li {
     display: inline-block;
 }
-.navbar ul li a{
+
+.navbar ul li a {
     display: block;
     text-align: center;
     min-width: 120px;
     padding: 0 30px;
 }
+
 .navbar ul li a:hover{
-    background-color: gray;
     transition:0.3s;  
 }
-body{
-    background-color: #000000;
-}
+
 .content {
-    font-family: 'Karla';
-    color: #d8d8d8;
     margin-top: 30%;
     margin-left: 100px;
 }
-h1{
+
+h1 {
     font-size: 70px;
 }
-p{
+
+p {
     margin-top:10px;
 }
-main{
+
+main {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.btns{
+
+.btns {
     margin-top: 20px;
     background: #d8d8d8;
     cursor: pointer;
-    color: #191919;
+    color: var(--clr-primary-1);
     padding: 12px 20px;
     float: left;
     border:0;
     border-radius: 20px;
     margin-left: 10px;
 }
-.btns:hover{
-    background:#848482;
+
+.btns:hover {
+    background: var(--clr-grey-7);
 }
-img{
+
+img {
     margin-top: 120px;
     margin-left: 135px;
     width: 420px;
     border-radius:50px;
     filter:grayscale(1);
 }
+
 img:hover{
     filter:grayscale(0);
     transition:3s;
